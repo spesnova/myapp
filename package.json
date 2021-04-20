@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "my sample app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "spesnova",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "log4js": "^6.3.0"
+  }
+}
