@@ -4,7 +4,7 @@
   "description": "my sample app",
   "main": "index.js",
   "scripts": {
-    "start": "node myapp/app.js"
+    "start": "node app.js"
   },
   "author": "spesnova",
   "license": "MIT",
