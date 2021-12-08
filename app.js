@@ -13,8 +13,8 @@ log4js.configure({
 
 
 app.get('/', (req, res) => {
-  logger.info("Hello World");
-  res.send('Hello World!');
+  logger.info("Hello App Runner");
+  res.send('Hello App Runner!');
 })
 
 app.listen(port, () => {
