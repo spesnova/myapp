@@ -4,7 +4,7 @@
   "description": "my sample app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node myapp/app.js"
   },
   "author": "spesnova",
   "license": "MIT",
