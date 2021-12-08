@@ -5,6 +5,6 @@ build:
     build:
       - npm install
 run:
-  command: node myapp/app.js
+  command: npm start
   network:
     port: 3000
