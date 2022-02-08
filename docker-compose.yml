@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:13.4
+    volumes:
+      - pgdata:/var/lib/postgresql/data:cached
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=demo
+
+volumes:
+  pgdata:
