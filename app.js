@@ -23,7 +23,10 @@ app.get('/', (req, res) => {
   pool.query('SELECT NOW()', (err, result) => {
     if (err != null) {
       logger.error(err)
+      pool.end()
+      return
     }
+
     logger.info("Current time is:", result.rows[0].now)
     pool.end()
   })
