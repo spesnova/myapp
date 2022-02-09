@@ -23,12 +23,10 @@ app.get('/', (req, res) => {
   pool.query('SELECT NOW()', (err, result) => {
     if (err != null) {
       logger.error(err)
-      pool.end()
       return
     }
 
     logger.info("Current time is:", result.rows[0].now)
-    pool.end()
   })
   logger.info("Hello World");
   res.send('Hello World!');
@@ -37,3 +35,10 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   logger.info(`Example app listening at http://localhost:${port}`);
 })
+
+process.on('SIGTERM', () => {
+  server.close(() => {
+    pool.end
+    logger.info("Stop the server gracefully")
+  })
+});
